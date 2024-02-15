@@ -12,15 +12,22 @@ import {
 	useColorMode,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import { DarkLogo, EngIcons, LightLogo, RusIcons, UzbIcons } from '../../icons';
+import { DarkLogo, LightLogo} from '../../icons';
 import { BsFillMoonFill, BsFillSunFill, BsTranslate } from 'react-icons/bs';
 import { MdOutlineContactSupport } from 'react-icons/md';
 import { BiMenuAltLeft, BiUserCircle } from 'react-icons/bi';
 import Link from 'next/link';
 import { HeaderProps } from './header.props';
+import { useTranslation } from 'react-i18next';
+import { languages } from '../../config/constants';
 
 const Header = ({ onToggle }: HeaderProps) => {
 	const { toggleColorMode, colorMode } = useColorMode();
+	const { t, i18n } = useTranslation();
+
+	const onLanguage = (lng: string) => {
+		i18n.changeLanguage(lng);
+	}
 
 	return (
 		<Box
@@ -44,12 +51,16 @@ const Header = ({ onToggle }: HeaderProps) => {
 				</HStack>
 				<HStack>
 					<IconButton aria-label='support' icon={<MdOutlineContactSupport />} colorScheme={'facebook'} variant={'ghost'} />
-					<Menu>
-						<MenuButton as={IconButton} icon={<BsTranslate />} colorScheme={'facebook'} variant={'solid'} />
+					<Menu placement='bottom'>
+						<MenuButton as={Button} colorScheme={'facebook'} variant={'solid'} rightIcon={<BsTranslate/>}>{i18n.resolvedLanguage}</MenuButton>
 						<MenuList>
-							<MenuItem icon={<UzbIcons />}>UZB</MenuItem>
-							<MenuItem icon={<RusIcons />}>RUS</MenuItem>
-							<MenuItem icon={<EngIcons />}>ENG</MenuItem>
+							{
+								languages.map((item) => (
+									<MenuItem key={item.lng} icon=	{<item.icon/>} backgroundColor={i18n.resolvedLanguage === item.lng? 'facebook.500' : ''} onClick={() => onLanguage(item.lng)}>
+										{item.nativeLng}
+									</MenuItem>
+								))
+							}
 						</MenuList>
 					</Menu>
 					<IconButton
@@ -60,7 +71,7 @@ const Header = ({ onToggle }: HeaderProps) => {
 						variant={'outline'}
 					/>
 					<Button rightIcon={<BiUserCircle />} colorScheme={'facebook'}>
-						LOGIN
+					{t('login', {ns: 'layout'})}
 					</Button>
 				</HStack>
 			</Flex>
