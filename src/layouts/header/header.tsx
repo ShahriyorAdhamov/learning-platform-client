@@ -27,7 +27,7 @@ const Header = ({ onToggle }: HeaderProps) => {
 
 	const onLanguage = (lng: string) => {
 		i18n.changeLanguage(lng);
-	}
+	};
 
 	return (
 		<Box

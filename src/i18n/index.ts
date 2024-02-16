@@ -1,19 +1,18 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 import detector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
-
+import backend from 'i18next-http-backend';
 
 i18n
-  .use(initReactI18next)
-  .use(detector) // passes i18n down to react-i18next
-  .use(HttpApi)
-  .init({
-    ns: ['layout', 'home'],
-    backend: {loadPath: '/locales/{{lng}}/{{ns}}.json'},
-    fallbackLng: "uz",
-    interpolation: {
-      escapeValue: false // react already safes from xss
-    },
-    detection: { order: ['cookie', 'localstorage'], caches: ['cookie'] },
-  });
+	.use(initReactI18next)
+	.use(detector)
+	.use(backend)
+	.init({
+		ns: ['layout', 'home', 'courses', 'books'],
+		backend: { loadPath: '/languages/{{lng}}/{{ns}}.json' },
+		fallbackLng: 'en',
+		interpolation: { escapeValue: false },
+		detection: { order: ['cookie', 'localstorage'], caches: ['cookie'] },
+	});
+
+export default i18n;

@@ -8,50 +8,50 @@ import { CourseType } from 'src/interfaces/course.interface';
 
 export const navigation = [
 	{
-		title: 'General',
+		title: 'sidebar_title_1',
 		links: [
 			{
-				label: 'Explore',
+				label: 'sidebar_title_1_explore',
 				route: '/',
 				icon: AiOutlineDashboard,
 			},
 			{
-				label: 'Courses',
+				label: 'sidebar_title_1_courses',
 				route: '/courses',
 				icon: CiViewList,
 			},
 			{
-				label: 'Books',
+				label: 'sidebar_title_1_books',
 				route: '/books',
 				icon: FaBookReader,
 			},
 			{
-				label: 'Articles',
+				label: 'sidebar_title_1_articles',
 				route: '/articles',
 				icon: MdImportContacts,
 			},
 		],
 	},
 	{
-		title: 'Pages',
+		title: 'sidebar_title_2',
 		links: [
 			{
-				label: 'About',
+				label: 'sidebar_title_2_about',
 				route: '/about',
 				icon: FaDraftingCompass,
 			},
 			{
-				label: 'Contact',
+				label: 'sidebar_title_2_contact',
 				route: '/contact',
 				icon: MdOutlineContactMail,
 			},
 			{
-				label: 'Pricing',
+				label: 'sidebar_title_2_pricing',
 				route: '/pricing',
 				icon: AiOutlineDollar,
 			},
 			{
-				label: 'FAQ',
+				label: 'sidebar_title_2_faq',
 				route: '/faq',
 				icon: FaQuestionCircle,
 			},
@@ -61,32 +61,32 @@ export const navigation = [
 
 export const categories = [
 	{
-		name: 'Creative Design',
+		name: 'design_category',
 		id: 1,
 		icon: DesignIcons,
 	},
 	{
-		name: 'Sales Marketing',
+		name: 'sales_marketing_category',
 		id: 2,
 		icon: AnnouncementIcons,
 	},
 	{
-		name: 'Development IT',
+		name: 'development_it_category',
 		id: 3,
 		icon: CodingIcons,
 	},
 	{
-		name: 'Engineering Architecture',
+		name: 'engineering_architecture_category',
 		id: 4,
 		icon: PrintIcons,
 	},
 	{
-		name: 'Personal Development',
+		name: 'personal_development_category',
 		id: 5,
 		icon: PersonIcons,
 	},
 	{
-		name: 'Finance Accounting',
+		name: 'finance_accounting_category',
 		id: 6,
 		icon: LaptopIcons,
 	},
@@ -153,9 +153,9 @@ export const courses: CourseType[] = [
 		reviewAverage: 4.5,
 		reviewCount: 200,
 		author: {
-			firstName: 'Samar',
-			lastName: 'Badriddinov',
-			avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+			firstName: 'Shahriyor',
+			lastName: 'Adhamov',
+			avatar: '',
 		},
 	},
 	{
@@ -170,7 +170,7 @@ export const courses: CourseType[] = [
 		author: {
 			firstName: 'Shahriyor',
 			lastName: 'Adhamov',
-			avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+			avatar: '',
 		},
 	},
 	{
@@ -185,7 +185,7 @@ export const courses: CourseType[] = [
 		author: {
 			firstName: 'Shahriyor',
 			lastName: 'Adhamov',
-			avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+			avatar: '',
 		},
 	},
 	{
@@ -200,7 +200,7 @@ export const courses: CourseType[] = [
 		author: {
 			firstName: 'Shahriyor',
 			lastName: 'Adhamov',
-			avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+			avatar: '',
 		},
 	},
 	{
@@ -215,7 +215,7 @@ export const courses: CourseType[] = [
 		author: {
 			firstName: 'Shahriyor',
 			lastName: 'Adhamov',
-			avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+			avatar: '',
 		},
 	},
 	{
@@ -230,7 +230,7 @@ export const courses: CourseType[] = [
 		author: {
 			firstName: 'Shahriyor',
 			lastName: 'Adhamov',
-			avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+			avatar: '',
 		},
 	},
 ];
