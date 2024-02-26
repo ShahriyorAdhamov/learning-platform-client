@@ -7,3 +7,6 @@ export { default as Testimonials } from './testimonials/testimonials';
 export { default as Newsletter } from './newsletter/newsletter';
 export { default as Sponsorship } from './sponsorship/sponsorship';
 export { default as AllCoursesCard } from './all-courses-card/all-courses-card';
+export { default as Login } from './login/login';
+export { default as Register } from './register/register';
+export { default as Verification } from './verification/verification';
