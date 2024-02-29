@@ -5,13 +5,19 @@ import { CiViewList } from 'react-icons/ci';
 import { SiGoogleanalytics } from 'react-icons/si';
 import ReactStars from 'react-stars';
 import { AllCoursesCardProps } from './all-courses-card.props';
+import { useRouter } from 'next/router';
 
 const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
+	const router = useRouter();
+
+	const onDetailedCourse = () => router.push(`/courses/${course.slug}`);
 	return (
 		<>
 			<Box py={4}>
 				<Flex gap={4} direction={{ base: 'column', md: 'row' }}>
 					<Image
+						cursor={'pointer'}
+						onClick={onDetailedCourse}
 						src={course.image}
 						alt={course.title}
 						w={{ base: 'full', md: '250px' }}
@@ -59,10 +65,14 @@ const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
 								{course.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
 							</Text>
 							<Flex gap={4} mt={{ base: 5, md: 0 }}>
-								<Button rightIcon={<BsMinecartLoaded />} colorScheme={'facebook'}>
+								<Button 
+								rightIcon={<BsMinecartLoaded />} colorScheme={'facebook'}>
 									Add to cart
 								</Button>
-								<Button colorScheme={'facebook'} variant={'outline'}>
+								<Button 
+								colorScheme={'facebook'} 
+								variant={'outline'} 
+								onClick={onDetailedCourse}>
 									Detail
 								</Button>
 							</Flex>

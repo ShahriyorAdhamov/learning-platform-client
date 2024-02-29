@@ -143,7 +143,8 @@ export const coursesFilter = [
 ];
 
 export const courses: CourseType[] = [
-	{
+	{	
+		slug: 'javascript',
 		image: 'https://media.graphassets.com/3gf746AKRbWNjB8OCoEB',
 		title: 'JavaScript full course',
 		lessonCount: 96,
@@ -158,7 +159,8 @@ export const courses: CourseType[] = [
 			avatar: '',
 		},
 	},
-	{
+	{		
+		slug: 'vuejs',
 		image: 'https://media.graphassets.com/54vR0DStGoFuZBVkFwWQ',
 		title: 'VueJS full course',
 		lessonCount: 30,
@@ -174,6 +176,7 @@ export const courses: CourseType[] = [
 		},
 	},
 	{
+		slug: 'react',
 		image: 'https://media.graphassets.com/65rcPxsLT9ysJDisXF80',
 		title: 'ReactJS full course',
 		lessonCount: 70,
@@ -189,6 +192,7 @@ export const courses: CourseType[] = [
 		},
 	},
 	{
+		slug: 'vuex',
 		image: 'https://media.graphassets.com/xactyo8TtyTIkAcMWvSm',
 		title: 'VueX full course',
 		lessonCount: 120,
@@ -204,6 +208,7 @@ export const courses: CourseType[] = [
 		},
 	},
 	{
+		slug: 'redux',
 		image: 'https://media.graphassets.com/Ql2hDpJhQsaBT3inNuZ4',
 		title: 'Redux full course',
 		lessonCount: 39,
@@ -219,6 +224,7 @@ export const courses: CourseType[] = [
 		},
 	},
 	{
+		slug: 'nodejs',
 		image: 'https://media.graphassets.com/mDcwhbguQpyM74jb18M5',
 		title: 'NodeJS full course',
 		lessonCount: 56,
